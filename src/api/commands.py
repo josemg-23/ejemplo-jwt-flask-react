@@ -20,13 +20,13 @@ def setup_commands(app):
         print("Creating test users")
         for x in range(1, int(count) + 1):
             user = User()
-            user.email = "test_user" + str(x) + "@test.com"
+            user.email = "test_user3" + str(x) + "@test.com"
             user.password = "123456"
-            user.is_active = True
+            user.is_active = ""
             db.session.add(user)
             db.session.commit()
             print("User: ", user.email, " created.")
 
-        print("All test users created")
+        print("All test users created sucessfuly")
 
         ### Insert the code to populate others tables if needed
